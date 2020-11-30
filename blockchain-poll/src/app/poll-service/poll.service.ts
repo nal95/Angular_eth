@@ -22,7 +22,7 @@ export class PollService {
       {
         id: 2,
         question: 'Do you like dogs or cats?',
-        thumbnail: 'https://images.pexels.com/photos/406014/pexels-photo-406014.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+        thumbnail: 'https://images.pexels.com/photos/38238/maldives-ile-beach-sun-38238.jpeg?cs=srgb&dl=pexels-pixabay-38238.jpg&fm=jpg',
         results: [1, 6, 4],
         options: ["June", "July", "August"],
         voted: false,

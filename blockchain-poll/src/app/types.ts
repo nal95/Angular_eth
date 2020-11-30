@@ -1,13 +1,21 @@
-export interface Poll {
-  id: number; //zb. 12
-  question: string; // wich days of week you like most?
-  results: number[]; //[10persons like M,20persons like T,0persons like W,5persons like T,10persons like F]
-  options: string[];// [M,T,W,T,F]
-  thumbnail: string;// https://image.png
+export interface Poll extends PollForm {
+  id: number; // 12
+  results: number[]; // [0, 0, 0, 0, 5, 7, 2]
   voted: boolean;
 }
 
+export interface PollForm {
+  question: string; // Which days of week you like most?
+  options: string[]; // ["Monday", "Tuesday", "Wednesday"....]
+  thumbnail: string; // https://image.png
+}
+
+export interface PollVote {
+  id: number;
+  vote: number;
+}
+
 export interface Voter {
-  id: string;// Hash zb. 0xJKSMF45NCZ12T
-  voted: number;//[12] number of voters
+  id: string; // 0xJHSADJH5412SXD
+  voted: number[]; // [12]
 }

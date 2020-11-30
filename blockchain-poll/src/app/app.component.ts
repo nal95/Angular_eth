@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Poll} from "./types";
+import {Poll, PollForm, PollVote} from "./types";
 import {PollService} from "./poll-service/poll.service";
 
 @Component({
@@ -21,5 +21,13 @@ export class AppComponent {
     setTimeout(()=>{
       this.activePoll = poll;
     },100);
+  }
+
+  handlePollCreate(poll: PollForm){
+    this.ps.createPoll(poll);
+  }
+
+  handlePollVote(pollVoted: PollVote) {
+    this.ps.vote(pollVoted.id, pollVoted.vote);
   }
 }

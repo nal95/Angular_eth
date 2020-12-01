@@ -21,11 +21,23 @@ export class Web3Service {
       this.contract = new this.web3.eth.Contract(
         contractAbi,
         this.contractAddress
-      )
-
+      );
+      window.ethereum.enable().catch((err) => {
+        console.log(err);
+      });
     }else{
       console.warn('Metamask not found. Install or enable Metamask .');
     }
+  }
+
+  getAccount(): Promise<string>{
+    return  this.web3.eth.getAccounts().then((accounts)=>accounts[0] || '');
+  }
+
+  async  executeTransaction (fnName: string, ...args: any[]): Promise<void> {
+    const acc = await this.getAccount();
+    this.contract.methods[fnName](...args).send({ from:acc });
+    //this.contract.methods['vote'](0, 20).send({ from:'' });
   }
 
 }

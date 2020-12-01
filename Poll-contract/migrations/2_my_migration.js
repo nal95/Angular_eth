@@ -1,7 +1,10 @@
 const PollContract = artifacts.require("PollContract");
 
-module.exports = function (deployer) {
-    deployer.deploy(PollContract);
+module.exports = async function (deployer) {
+    console.log('try to deploy PollContract');
+    await deployer.deploy(PollContract);
+    const pollCcontract = await PollContract.deployed();
+    console.log('\n PollContract deplyement succes -->' ,PollContract.address);
 };
 const addresses = {
     pollContract: PollContract.address,

@@ -1,1 +1,1 @@
-export const ADDRESSES = {'pollContract':'0xF6Fd5Ddbef427e64c8b88832b183D26e14B0315E'};
+export const ADDRESSES = {'pollContract':'0x4E1A405DEc5160bD37447e0A7546a9a41AB50895'};

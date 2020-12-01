@@ -24,7 +24,8 @@
     "openzeppelin-solidity": "2.1.3"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "truffle migrate --reset | findstr ADDRESSES > ../blockchain-poll/src/environments/contractCreator.ts",
+    "postbuild": "copy .\\build\\contracts\\* ..\\blockchain-poll\\src\\contracts\\"
   },
   "browserslist": [
     ">0.2%",

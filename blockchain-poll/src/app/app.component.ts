@@ -13,6 +13,7 @@ export class AppComponent {
 
   polls = this.ps.getPolls()
 
+
   constructor(private  ps: PollService) {
   }
 

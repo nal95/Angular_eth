@@ -3,7 +3,7 @@ import Web3 from 'web3';
 import { Contract } from "web3-eth-contract";
 import { ADDRESSES } from '../../environments/contractCreator'
 
-const contractAbi = require("../../contracts/PollContract.json");
+const contractAbi = require('./PollContract.json');
 declare var window: any;
 
 

@@ -7,6 +7,6 @@ module.exports = async function (deployer) {
     console.log('\n PollContract deplyement succes -->' ,PollContract.address);
 };
 const addresses = {
-    pollContract: PollContract.address,
+    pollContract: pollCcontract.address,
 };
 console.log(`export const ADDRESSES = ${JSON.stringify(addresses).replace(/"/gmi, '\'')};`);
